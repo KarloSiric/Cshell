@@ -4,7 +4,7 @@
    Author: ksiric <email@example.com>
    Created: 2026-02-24 00:49:23
    Last Modified by: ksiric
-   Last Modified: 2026-02-24 01:45:45
+   Last Modified: 2026-02-24 20:01:52
    ---------------------------------------------------------------------
    Description:
        
@@ -42,6 +42,6 @@ void Err_Print( serror_t error_code, const char *fmt, ... ) {
     vsnprintf( buffer, sizeof( buffer ), fmt, args );
     va_end( args );
     fprintf( stderr, "%s: %s", SHELL_NAME, serror_strings[error_code] );
-    fprintf(stderr, "%s: %s", SHELL_NAME, buffer ); 
+    fprintf( stderr, "%s: %s", SHELL_NAME, buffer ); 
 }
 
