@@ -2,12 +2,13 @@
 #define __SHELL_H__ 
 
 #include "scommon.h"
-#include "serror.h"
 
 void Shell_Init();
 void Shell_Loop();
 void Shell_Prompt();
 void Shell_Parse( const char *line );
-void Shell_Readline( char *buf, size_t bufsize );
+void Shell_Execute( s_cmd_t *cmd );
+char *Shell_Readline();
+
 
 #endif              /* __SHELL_H__ END */

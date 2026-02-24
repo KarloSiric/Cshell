@@ -1,9 +1,9 @@
 #ifndef __SERROR_H__
 #define __SERROR_H__
 
-#include "scommon.h"
 #include <errno.h>
 #include <stdarg.h>
+#include <stdio.h>
 
 #define ERR_PRINTF( ... )           Err_Printf( __VA_ARGS__ )
 #define ERR_FPRINF( stream, ... )   Err_FPrintf( stream, __VA_ARGS__ )

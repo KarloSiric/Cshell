@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <unistd.h>
+#include <sys/wait.h>
 
 #define PROMPT                          "$ "
 #define SHELL_NAME                      "simpleshell"
@@ -27,6 +29,11 @@ typedef int8_t          i8;
 typedef int16_t         i16;
 typedef int32_t         i32;
 typedef int64_t         i64;
+
+typedef struct {
+    char *tokens[MAX_ARGS];
+    u32 token_count;
+} s_cmd_t;
 
 void Com_Printf( const char *fmt, ... );
 void Com_FPrintf( FILE *fstream, const char *fmt, ... );
