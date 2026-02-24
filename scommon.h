@@ -11,7 +11,7 @@
 #define SHELL_NAME                      "simpleshell"
 
 #define MAX_ARGS                        64
-#define MAX_LINE_INPUT                  2048
+#define MAX_LINE_INPUT                  4096
 #define DELIMITERS                      " \t\n"
 
 #define COM_PRINTF( ... )               Com_Printf( __VA_ARGS__ )

@@ -7,13 +7,7 @@
 void Shell_Init();
 void Shell_Loop();
 void Shell_Prompt();
-void Shell_Readline( const char *buf, size_t bufsize );
+void Shell_Parse( const char *line );
+void Shell_Readline( char *buf, size_t bufsize );
 
-
-
-
-
-
-
-
-#endif
+#endif              /* __SHELL_H__ END */

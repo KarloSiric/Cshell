@@ -33,4 +33,4 @@ void Err_Print( serror_t error_code, const char *fmt, ... );
 void Err_Printf( const char *fmt, ... );
 void Err_FPrintf( FILE *fstream, const char *fmt, ... );
 
-#endif
+#endif          /* __SERROR_H__ END */
