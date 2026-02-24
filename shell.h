@@ -4,6 +4,7 @@
 #include "scommon.h"
 
 void Shell_Init();
+void Shell_Exit();
 void Shell_Loop();
 void Shell_Prompt();
 void Shell_Parse( const char *line );
