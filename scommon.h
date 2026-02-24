@@ -5,13 +5,17 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdarg.h>
 
-#define PROMPT          "$ "
-#define SHELL_NAME      "simpleshell"
+#define PROMPT                          "$ "
+#define SHELL_NAME                      "simpleshell"
 
-#define MAX_ARGS        64
-#define MAX_LINE_INPUT  2048
-#define DELIMITERS      " \t\n"
+#define MAX_ARGS                        64
+#define MAX_LINE_INPUT                  2048
+#define DELIMITERS                      " \t\n"
+
+#define COM_PRINTF( ... )               Com_Printf( __VA_ARGS__ )
+#define COM_FPRINTF( stream, ... )      Com_FPrintf( stream, __VA_ARGS__) 
 
 typedef uint8_t         byte;
 typedef uint16_t        u16;
@@ -23,5 +27,8 @@ typedef int8_t          i8;
 typedef int16_t         i16;
 typedef int32_t         i32;
 typedef int64_t         i64;
+
+void Com_Printf( const char *fmt, ... );
+void Com_FPrintf( FILE *fstream, const char *fmt, ... );
 
 #endif          /* __S_COMMON_H__ END */
